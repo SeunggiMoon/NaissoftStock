@@ -7,7 +7,7 @@
 #include "StockFunctions.h"
 #include "Stock.h"
 
-int Money, StockPrice[MAX_COMPANY], PrevStockPrice[MAX_COMPANY], Stocks, StockDeal, loanMoney;
+int Money, StockPrice[MAX_COMPANY], PrevStockPrice[MAX_COMPANY], Stocks, StockDeal, loanMoney, companyOrder[MAX_COMPANY];
 bool ifGood[MAX_COMPANY];
 
 char *CompanyName[MAX_COMPANY] =
@@ -23,8 +23,6 @@ char *CompanyName[MAX_COMPANY] =
 	"수배자 모터스",
 	"기야조선업",
 };
-
-int companyOrder[MAX_COMPANY] = { 0 };
 
 void ChangeStockPrice()
 {
@@ -163,11 +161,6 @@ void payback()
 {
 	Money -= loanMoney;
 	loanMoney = 0;
-}
-
-void _buyStock(int stocknum, int company)
-{
-
 }
 
 void buyStock(int order, int amount)

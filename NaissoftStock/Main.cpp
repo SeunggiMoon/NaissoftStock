@@ -63,7 +63,7 @@ int main(void)
 		{
 		case 'b':
 		case 'B':
-			buyMenu(order);
+			buyMenu(companyOrder[order]);
 			break;
 		case 'v':
 		case 'V':
